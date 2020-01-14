@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title> Heart Animation </title>
+
+        <style>
+        @import url('https://fonts.googleapis.com/css?family=Pattaya&display=swap');
+        
+        body {
+            background-color: #f7cbef;
+        }
+
+        .heart {
+            position: absolute;
+            background-color: #ff38d4;
+            top: 15em;
+            left: 40em;
+            width: 100px;
+            height: 100px;
+            transform: rotate(-45deg);
+            animation-name: beat;
+            animation-duration: 1.5s;
+            animation-iteration-count: infinite;
+        }
+
+        .heart::before {
+            content: "" ;
+            position: absolute;
+            background-color: #ff38d4;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            top: -3em;
+        }
+
+        .heart::after {
+            content: "" ;
+            position: absolute;
+            background-color: #ff38d4;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            left: 3em;
+        }
+
+        @keyframes beat {
+            0% {
+                transform: scale(1) rotate(-45deg);
+                
+            }
+            50% {
+                transform: scale(0.8) rotate(-45deg);
+            }
+        }
+
+        .container {
+            display: flex;
+            
+            width: 100%;
+            height: 94vh;
+            justify-content: center;
+            align-items: flex-end;
+        }
+
+        p {
+            position: absolute;
+            bottom: 3.5em; 
+            font-size: 34px;
+            padding: 10px;
+            padding-right: 10px;
+            margin-left: 12px;
+            font-family: 'Pattaya', sans-serif;
+            color: #e81abb;
+        } 
+        </style>
+
+    </head>
+
+    <body>
+
+        <div class="heart"></div>
+        <br>
+        <div class="container">
+        <p> Remember to follow and like! </p>
+        </div>
+
+    </body>
+
+</html>
